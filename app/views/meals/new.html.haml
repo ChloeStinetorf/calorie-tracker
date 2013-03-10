@@ -1,0 +1,18 @@
+.row
+  .twelve.columns
+  %h1 Add Meal:
+
+.row
+  .five.columns
+    = render(:partial => '/shared/errors', :locals => {:object => @meal})
+    = form_for @meal do |f|
+      = f.label :name
+      = f.text_field :name, :autofocus => true
+      = f.label :calories
+      = f.text_field :calories
+      = f.label :date
+      = f.text_field :date
+      = f.label :time
+      = f.text_field :time
+      = f.submit "Add Meal", :class => 'button info'
+  .seven.columns

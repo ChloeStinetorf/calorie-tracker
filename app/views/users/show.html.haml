@@ -1,0 +1,74 @@
+.row
+  .twelve.columns
+    %h1 Calorie Count:
+
+.row
+  .four.columns
+    = button_tag '+ Meal', :id => 'new_meal', :class => 'button success';
+    = button_tag '+ Workout', :id => 'new_workout', :class => 'button success';
+  .four.columns
+  .four.columns
+
+
+    / = button_tag 'View Meals', :id => 'view_meals', :class => 'button info';
+    / = button_tag 'View Workouts', :id => 'view_workouts', :class => 'button info';
+    / = button_tag 'Meal Stats', :id => 'total_meal_calories', :class => 'button alert';
+    / = button_tag 'Workout Stats', :id => 'total_workout_calories', :class => 'button alert';
+
+.row
+  .twelve.columns
+    #calories
+
+.row
+  .three.columns
+    %ul.meals_list
+      - @meals.each do |meal|
+        %li
+          .meal.bold= meal.name
+          .meal.calories= meal.calories.to_s + ' Calories'
+          .meal= meal.date
+          .meal.line
+          .clear
+  .three.columns
+    %ul.workouts_list
+      - @workouts.each do |workout|
+        %li
+          .workout.bold= workout.name
+          .workout.calories= workout.calories.to_s + ' Calories'
+          .workout= workout.date
+          .workout.line
+          .clear
+  .six.columns
+
+
+.row
+  .five.columns
+    .form.meal_form.hide
+      = form_for @meal do |f|
+        = f.button "Add Meal", :type => 'button', :id => 'create_meal', :class => 'button info'
+        = f.button "Cancel", :type => 'button', :class => 'button info cancel'
+        = f.label :name
+        = f.text_field :name, :autofocus => true
+        = f.label :calories
+        = f.text_field :calories
+        = f.label :date
+        = f.text_field :date
+  .seven.columns
+
+.row
+  .five.columns
+    .form.workout_form.hide
+      = form_for @workout do |f|
+        = f.button "Add Workout", :type => 'button', :id => 'create_workout', :class => 'button info'
+        = f.button "Cancel", :type => 'button', :class => 'button info cancel'
+        = f.label :name
+        = f.text_field :name, :autofocus => true
+        = f.label :calories
+        = f.text_field :calories
+        = f.label :date
+        = f.text_field :date
+  .seven.columns
+
+
+
+
