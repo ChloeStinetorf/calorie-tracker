@@ -6,16 +6,16 @@ class WorkoutsController < ApplicationController
     id = params[:id]
     name = params[:name]
     calories = params[:calories]
-    time = params[:time]
+    date = params[:date]
 
       if id.present?
         workout = Workout.find(id)
         workout.name = name
         workout.calories = calories
-        workout.time = time
+        workout.date = date
         workout.save
       else
-        workout = Workout.create(:name => name, :calories => calories, :time => time)
+        workout = Workout.create(:name => name, :calories => calories, :date => date)
         @auth.workouts << workout
       end
 
@@ -23,4 +23,7 @@ class WorkoutsController < ApplicationController
 
   end
 end
+
+
+
 

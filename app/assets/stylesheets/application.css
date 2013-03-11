@@ -3,6 +3,6 @@
   *= require 'foundation/stylesheets/foundation.min.css'
   *= require 'foundation/stylesheets/app.css'
   *= require 'morris/morris.css'
-  *= require 'calorie_tracker'
-
+  *= require 'calorie_tracker.scss'
+  *= require 'hot-sneaks/jquery-ui-1.9.2.custom.min.css'
  */

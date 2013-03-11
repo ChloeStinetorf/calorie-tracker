@@ -12,6 +12,6 @@
 #
 
 class Workout < ActiveRecord::Base
-  attr_accessible :name, :calories, :time, :user_id, :date
+  attr_accessible :name, :calories, :user_id, :date
   belongs_to :user, :inverse_of => :workouts
 end

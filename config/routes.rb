@@ -7,7 +7,7 @@ CalorieTracker::Application.routes.draw do
   delete '/login' => 'session#destroy'
 
   resources :users, :only => [:index, :new, :create, :show]
-  resources :workouts, :only => [:new, :create]
-  resources :meals, :only => [:new, :create]
+  resources :workouts, :only => [:new, :create, :index, :chart]
+  resources :meals, :only => [:new, :create, :index, :chart]
 
 end

@@ -1,6 +1,12 @@
+%script
+  var all_meals = [];
+  var all_workouts = [];
+  var selected_date_meals = [];
+  var selected_date_workouts = [];
+
 .row
   .twelve.columns
-    %h1 Calorie Count:
+    %h1#todays_date
 
 .row
   .four.columns
@@ -10,46 +16,19 @@
   .four.columns
 
 
-    / = button_tag 'View Meals', :id => 'view_meals', :class => 'button info';
-    / = button_tag 'View Workouts', :id => 'view_workouts', :class => 'button info';
-    / = button_tag 'Meal Stats', :id => 'total_meal_calories', :class => 'button alert';
-    / = button_tag 'Workout Stats', :id => 'total_workout_calories', :class => 'button alert';
-
 .row
   .twelve.columns
     #calories
 
 .row
-  .three.columns
-    %ul.meals_list
-      - @meals.each do |meal|
-        %li
-          .meal.bold= meal.name
-          .meal.calories= meal.calories.to_s + ' Calories'
-          .meal= meal.date
-          .meal.line
-          .clear
-  .three.columns
-    %ul.workouts_list
-      - @workouts.each do |workout|
-        %li
-          .workout.bold= workout.name
-          .workout.calories= workout.calories.to_s + ' Calories'
-          .workout= workout.date
-          .workout.line
-          .clear
-  .six.columns
-
-
-.row
   .five.columns
     .form.meal_form.hide
       = form_for @meal do |f|
-        = f.button "Add Meal", :type => 'button', :id => 'create_meal', :class => 'button info'
+        = f.button "Save", :type => 'button', :id => 'create_meal', :class => 'button info'
         = f.button "Cancel", :type => 'button', :class => 'button info cancel'
-        = f.label :name
+        = f.label :name, "Meal description"
         = f.text_field :name, :autofocus => true
-        = f.label :calories
+        = f.label :calories, "Calories consumed (positive number)"
         = f.text_field :calories
         = f.label :date
         = f.text_field :date
@@ -59,15 +38,38 @@
   .five.columns
     .form.workout_form.hide
       = form_for @workout do |f|
-        = f.button "Add Workout", :type => 'button', :id => 'create_workout', :class => 'button info'
+        = f.button "Save", :type => 'button', :id => 'create_workout', :class => 'button info'
         = f.button "Cancel", :type => 'button', :class => 'button info cancel'
-        = f.label :name
+        = f.label :name, "Workout description"
         = f.text_field :name, :autofocus => true
-        = f.label :calories
+        = f.label :calories, "Calories burned (negative number)"
         = f.text_field :calories
         = f.label :date
         = f.text_field :date
   .seven.columns
+
+.row
+  .three.columns
+    %h5 Your meals today:
+    %ul.meals_list
+      - @meals.each do |meal|
+        %script
+          = "all_meals.push({id:#{meal.id}, name:'#{meal.name}', calories: #{meal.calories}, user_id: #{meal.user_id}, date: '#{meal.date.strftime("%Y-%m-%d %H:%M:%S")}'});"
+  .three.columns
+    %h5 Your workouts today:
+    %ul.workouts_list
+      - @workouts.each do |workout|
+        %script
+          = "all_workouts.push({id:#{workout.id}, name:'#{workout.name}', calories: #{workout.calories}, user_id: #{workout.user_id}, date: '#{workout.date.strftime("%Y-%m-%d %H:%M:%S")}'});"
+  .six.columns
+    %h3 Your Calorie Count Today:
+    #daily_calorie_total
+    #chart
+
+
+
+
+
 
 
 
