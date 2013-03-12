@@ -1,6 +1,6 @@
 .row
   .twelve.columns
-  %h1 Sign into your account:
+  %h1.sign_in_header Sign in:
 .row
   .five.columns
     = form_tag '/login' do
@@ -8,5 +8,5 @@
       = text_field_tag 'email', nil, :autofocus => true
       = label_tag  'password'
       = password_field_tag 'password'
-      = submit_tag 'Start Tracking!', :class => 'button info'
+      = submit_tag 'Submit', :class => 'button radius info'
   .seven.columns

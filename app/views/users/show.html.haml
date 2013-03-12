@@ -23,6 +23,7 @@
 .row
   .five.columns
     .form.meal_form.hide
+      = render(:partial => '/shared/errors', :locals => {:object => @meal})
       = form_for @meal do |f|
         = f.button "Save", :type => 'button', :id => 'create_meal', :class => 'button info'
         = f.button "Cancel", :type => 'button', :class => 'button info cancel'
@@ -37,6 +38,7 @@
 .row
   .five.columns
     .form.workout_form.hide
+      = render(:partial => '/shared/errors', :locals => {:object => @workout})
       = form_for @workout do |f|
         = f.button "Save", :type => 'button', :id => 'create_workout', :class => 'button info'
         = f.button "Cancel", :type => 'button', :class => 'button info cancel'
@@ -50,20 +52,21 @@
 
 .row
   .three.columns
-    %h5 Your meals today:
+    %h5.meal_h Meals today:
     %ul.meals_list
       - @meals.each do |meal|
         %script
           = "all_meals.push({id:#{meal.id}, name:'#{meal.name}', calories: #{meal.calories}, user_id: #{meal.user_id}, date: '#{meal.date.strftime("%Y-%m-%d %H:%M:%S")}'});"
   .three.columns
-    %h5 Your workouts today:
+    %h5.workout_h Workouts today:
     %ul.workouts_list
       - @workouts.each do |workout|
         %script
           = "all_workouts.push({id:#{workout.id}, name:'#{workout.name}', calories: #{workout.calories}, user_id: #{workout.user_id}, date: '#{workout.date.strftime("%Y-%m-%d %H:%M:%S")}'});"
   .six.columns
-    %h3 Your Calorie Count Today:
+    %h3.calorie_count Your Calorie Count Today:
     #daily_calorie_total
+    %h3.calorie_chart Your Fitness Progress:
     #chart
 
 

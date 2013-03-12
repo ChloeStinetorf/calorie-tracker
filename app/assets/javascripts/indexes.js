@@ -3,6 +3,7 @@ function update_selected_meals()
 {
   selected_date_meals = _.filter(all_meals, function(meal) {return (moment(meal.date).format('MMDDYY') == selected_date.format('MMDDYY')); });
   $('ul.meals_list').empty();
+  selected_date_meals = _.sortBy(selected_date_meals, function(m){ return m.date; });
   _.each(selected_date_meals, display_meals);
 }
 
@@ -32,6 +33,7 @@ function update_selected_workouts()
 {
   selected_date_workouts = _.filter(all_workouts, function(workout) {return (moment(workout.date).format('MMDDYY') == selected_date.format('MMDDYY')); });
   $('ul.workouts_list').empty();
+  selected_date_workouts = _.sortBy(selected_date_workouts, function(w){ return w.date; });
   _.each(selected_date_workouts, display_workouts);
 }
 
@@ -53,6 +55,11 @@ function display_workouts(workout)
   li3.text(workout_date);
 
   $('.workouts_list').append([li1, li2, li3, li4]);
+
 }
+
+
+
+
 
 

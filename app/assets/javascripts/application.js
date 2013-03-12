@@ -11,7 +11,7 @@
 //= require 'underscore-min.js'
 //= require 'moment.min.js'
 //= require 'graph.js'
-//= require 'caltotal.js'
+//= require 'calorietotal.js'
 //= require 'dates.js'
 //= require 'forms.js'
 //= require 'indexes.js'

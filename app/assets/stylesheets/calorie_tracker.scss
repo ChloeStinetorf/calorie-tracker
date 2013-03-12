@@ -3,6 +3,27 @@
   clear: both;
 }
 
+#new_meal
+{
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+#new_workout
+{
+  margin-top: 20px;
+}
+
+.workout_h
+{
+  margin-top: 40px;
+}
+
+.meal_h
+{
+  margin-top: 40px;
+}
+
 ul
 {
   list-style-type: none;
@@ -20,7 +41,8 @@ ul
 
 #daily_calorie_total
 {
-  font-size: 200px;
+  font-size: 150px;
+  padding-left: 55px;
 }
 
 #chart
@@ -29,15 +51,100 @@ ul
   width: 500px;
 }
 
-h3
+.sign_up_header
 {
   font-family: "runda",sans-serif;
+  padding: 20px;
+  font-size: 45px;
+  padding-left: 0;
+
+}
+
+.sign_in_header
+{
+  font-family: "runda",sans-serif;
+  padding: 20px;
+  font-size: 45px;
+  padding-left: 0;
+}
+
+h5
+{
+  font-family: "runda",sans-serif;
+  font-size: 25px;
+}
+
+.sub_header
+{
+  font-family: "runda",sans-serif;
+  clear: both;
+  font-size: 28px;
 }
 
 .home_header
 {
   font-family: "runda",sans-serif;
   font-size: 150px;
+  float: left;
+}
+
+#todays_date
+{
+  font-family: "runda",sans-serif;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+#calories
+{
+  font-family: "runda",sans-serif;
+  font-size: 50px;
+}
+
+.calorie_count
+{
+  font-family: "runda",sans-serif;
+  font-size: 30px;
+  padding-left: 40px;
+  margin-top: 40px;
+}
+
+.calorie_chart
+{
+  font-family: "runda",sans-serif;
+  font-size: 30px;
+  padding-left: 40px;
+}
+
+#fitling
+{
+  height: 110px;
+  position: relative;
+  top: 40px;
+  left: 40px;
+  float: left;
+}
+
+.footer
+{
+  margin-top: 250px;
+}
+
+.header
+{
+  margin-top: 50px;
+}
+
+label
+{
+  font-family: "museo-sans",sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+body
+{
+  color: black;
 }
 
 

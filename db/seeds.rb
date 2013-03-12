@@ -29,11 +29,11 @@ m18 = Meal.create(:name => 'falafel', :calories => '375', :date => '2013-02-04 1
 m19 = Meal.create(:name => 'chips', :calories => '200', :date => '2013-02-04 17:00:00')
 m20 = Meal.create(:name => 'steak', :calories => '1000', :date => '2013-02-04 21:30:00')
 
-m21 = Meal.create(:name => 'fruit', :calories => '200', :date => '2013-02-05 06:30:00')
-m22 = Meal.create(:name => 'bagel', :calories => '350', :date => '2013-02-05 09:45:00')
-m23 = Meal.create(:name => 'soup', :calories => '500', :date => '2013-02-05 12:15:00')
-m24 = Meal.create(:name => 'panini', :calories => '750', :date => '2013-02-05 16:30:00')
-m25 = Meal.create(:name => 'quesadilla', :calories => '1200', :date => '2013-02-05 20:45:00')
+m21 = Meal.create(:name => 'fruit', :calories => '200', :date => '2013-03-14 06:30:00')
+m22 = Meal.create(:name => 'bagel', :calories => '350', :date => '2013-03-14 09:45:00')
+m23 = Meal.create(:name => 'soup', :calories => '500', :date => '2013-03-14 12:15:00')
+m24 = Meal.create(:name => 'panini', :calories => '750', :date => '2013-03-14 16:30:00')
+m25 = Meal.create(:name => 'quesadilla', :calories => '1200', :date => '2013-03-14 20:45:00')
 
 m26 = Meal.create(:name => 'pancakes', :calories => '450', :date => '2013-02-06 09:30:00')
 m27 = Meal.create(:name => 'grapefruit', :calories => '150', :date => '2013-02-06 11:00:00')
@@ -197,11 +197,11 @@ m158 = Meal.create(:name => 'salad', :calories => '500', :date => '2013-03-04 12
 m159 = Meal.create(:name => 'crackers', :calories => '300', :date => '2013-03-04 15:45:00')
 m160 = Meal.create(:name => 'burrito', :calories => '950', :date => '2013-03-04 21:0:00')
 
-m161 = Meal.create(:name => 'toast', :calories => '150', :date => '2013-03-05 09:30:00')
-m162 = Meal.create(:name => 'granola', :calories => '300', :date => '2013-03-05 11:00:00')
-m163 = Meal.create(:name => 'cheese', :calories => '450', :date => '2013-03-05 13:30:00')
-m164 = Meal.create(:name => 'sushi', :calories => '1200', :date => '2013-03-05 15:00:00')
-m165 = Meal.create(:name => 'cookies', :calories => '500', :date => '2013-03-05 18:45:00')
+m161 = Meal.create(:name => 'toast', :calories => '150', :date => '2013-02-05 09:30:00')
+m162 = Meal.create(:name => 'granola', :calories => '300', :date => '2013-02-05 11:00:00')
+m163 = Meal.create(:name => 'cheese', :calories => '450', :date => '2013-02-05 13:30:00')
+m164 = Meal.create(:name => 'sushi', :calories => '1200', :date => '2013-02-05 15:00:00')
+m165 = Meal.create(:name => 'cookies', :calories => '500', :date => '2013-02-05 18:45:00')
 
 m166 = Meal.create(:name => 'omelette', :calories => '400', :date => '2013-03-05 07:45:00')
 m167 = Meal.create(:name => 'trailmix', :calories => '500', :date => '2013-03-05 12:30:00')
@@ -296,8 +296,8 @@ w24 = Workout.create(:name => 'situps', :calories => '-150', :date => '2013-02-1
 w25 = Workout.create(:name => 'pushups', :calories => '-150', :date => '2013-02-13 09:30:00')
 w26 = Workout.create(:name => 'stairmaster', :calories => '-250', :date => '2013-02-13 17:30:00')
 
-w27 = Workout.create(:name => 'jogging', :calories => '-250', :date => '2013-02-13 08:30:00')
-w28 = Workout.create(:name => 'yoga', :calories => '-500', :date => '2013-02-13 17:00:00')
+w27 = Workout.create(:name => 'jogging', :calories => '-250', :date => '2013-03-14 08:30:00')
+w28 = Workout.create(:name => 'yoga', :calories => '-500', :date => '2013-03-14 17:00:00')
 
 w29 = Workout.create(:name => 'pilates', :calories => '-500', :date => '2013-02-14 10:30:00')
 w30 = Workout.create(:name => 'weights', :calories => '-300', :date => '2013-02-14 20:00:00')
@@ -374,17 +374,17 @@ w76 = Workout.create(:name => 'yoga', :calories => '-500', :date => '2013-03-09 
 w77 = Workout.create(:name => 'pilates', :calories => '-500', :date => '2013-03-10 10:30:00')
 w78 = Workout.create(:name => 'weights', :calories => '-300', :date => '2013-03-10 20:00:00')
 
-w80 = Workout.create(:name => 'running', :calories => '-350', :date => '2013-03-11 09:30:00')
-w81 = Workout.create(:name => 'fencing', :calories => '-500', :date => '2013-03-11 18:00:00')
+w79 = Workout.create(:name => 'running', :calories => '-350', :date => '2013-03-11 09:30:00')
+w80 = Workout.create(:name => 'fencing', :calories => '-500', :date => '2013-03-11 18:00:00')
 
-w82 = Workout.create(:name => 'lifting', :calories => '-350', :date => '2013-03-12 08:00:00')
-w83 = Workout.create(:name => 'squash', :calories => '-500', :date => '2013-03-12 18:45:00')
+w81 = Workout.create(:name => 'lifting', :calories => '-350', :date => '2013-03-12 08:00:00')
+w82 = Workout.create(:name => 'squash', :calories => '-500', :date => '2013-03-12 18:45:00')
 
-w84 = Workout.create(:name => 'core', :calories => '-250', :date => '2013-03-13 06:00:00')
-w85 = Workout.create(:name => 'situps', :calories => '-150', :date => '2013-03-13 19:00:00')
+w83 = Workout.create(:name => 'core', :calories => '-250', :date => '2013-03-13 06:00:00')
+w84 = Workout.create(:name => 'situps', :calories => '-150', :date => '2013-03-13 19:00:00')
 
-u1.meals = [m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23, m24, m25, m26, m27, m28, m29, m30, m31, m32, m33, m34, m35, m36, m37, m38, m39, m40, m41, m42, m43, m44, m45, m46, m47, m48, m49, m40, m51, m52, m53, m54, m55, m56, m57, m58, m59, m60, m61, m62, m63, m64, m65, m66, m67, m68, m69, m70, m71, m72, m73, m74, m75, m76, m77, m78, m79, m80, m81, m82, m83, m84, m85, m86, m87, m88, m89, m90, m91, m92, m93, m94, m95, m96, m97, m98, m99, m100, m101, m102, m103, m104, m105, m106, m107, m108, m109, m110, m111, m112, m113, m114, m115, m116, m117, m118, m119, m120, m121, m122, m123, m124, m125, m126, m127, m128, m129, m130, m131, m132, m133, m134, m135, m136, m137, m138, m139, m140, m141, m142, m143, m144, m145, m146, m147, m148, m149, m150, m151, m152, m153, m154, m155, m156, m157, m158, m159, m160, m161, m162, m163, m164, m165, m166, m167, m168, m169, m170, m171, m172, m173, m174, m175, m176, m177, m178, m179, m180, m181, m182, m183, m184, m185, m186, m187, m188, m189, m190, m191, m192, m193, m194, m195, m196, m197, m198, m199, m200, m201, m202, m203, m204, m205, m206, m207, m208, m209, m210, m211, m212, m113, m114, m115, m116, m117, m118, m119, m220]
-u1.workouts = [w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15, w16, w17, w18, w19, w20, w21, w22, w23, w24, w25, w26, w27, w28, w29, w30, w31, w32, w33, w34, w35, w36, w37, w38, w39, w40, w41, w42, w43, w44, w45, w46, w47, w48, w49, w40, w51, w52, w53, w54, w55, w56, w57, w58, w59, w60, w61, w62, w63, w64, w65, w66, w67, w68, w69, w70, w71, w72, w73, w74, w75, w76, w77, w78, w79, w80, w81, w82, w83, w84, w85]
+u1.meals = [m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23, m24, m25, m26, m27, m28, m29, m30, m31, m32, m33, m34, m35, m36, m37, m38, m39, m40, m41, m42, m43, m44, m45, m46, m47, m48, m49, m40, m51, m52, m53, m54, m55, m56, m57, m58, m59, m60, m61, m62, m63, m64, m65, m66, m67, m68, m69, m70, m71, m72, m73, m74, m75, m76, m77, m78, m79, m80, m81, m82, m83, m84, m85, m86, m87, m88, m89, m90, m91, m92, m93, m94, m95, m96, m97, m98, m99, m100, m101, m102, m103, m104, m105, m106, m107, m108, m109, m110, m111, m112, m113, m114, m115, m116, m117, m118, m119, m120, m121, m122, m123, m124, m125, m126, m127, m128, m129, m130, m131, m132, m133, m134, m135, m136, m137, m138, m139, m140, m141, m142, m143, m144, m145, m146, m147, m148, m149, m150, m151, m152, m153, m154, m155, m156, m157, m158, m159, m160, m161, m162, m163, m164, m165, m166, m167, m168, m169, m170, m171, m172, m173, m174, m175, m176, m177, m178, m179, m180, m191, m192, m193, m194, m195, m196, m197, m198, m199, m200, m201, m202, m203, m204, m205, m206, m207, m208, m209, m210, m211, m212, m213, m214, m215, m216, m217, m218, m219, m220]
+u1.workouts = [w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15, w16, w17, w18, w19, w20, w21, w22, w23, w24, w25, w26, w27, w28, w29, w30, w31, w32, w33, w34, w35, w36, w37, w38, w39, w40, w41, w42, w43, w44, w45, w46, w47, w48, w49, w50, w51, w52, w53, w54, w55, w56, w57, w58, w59, w60, w61, w62, w63, w64, w65, w66, w67, w68, w69, w70, w71, w72, w73, w74, w75, w76, w77, w78, w79, w80, w81, w82, w83, w84]
 
 
 

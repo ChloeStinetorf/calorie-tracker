@@ -14,4 +14,7 @@
 class Meal < ActiveRecord::Base
   attr_accessible :name, :calories, :user_id, :date
   belongs_to :user, :inverse_of => :meals
+  validates :name, :presence => true, :length => { :minimum => 1 }
+  validates :calories, :presence => true, :length => { :minimum => 1 }
+  validates :date, :presence => true
 end

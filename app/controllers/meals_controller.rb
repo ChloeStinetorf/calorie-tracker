@@ -8,17 +8,27 @@ class MealsController < ApplicationController
     calories = params[:calories]
     date = params[:date]
 
-      if id.present?
-        meal = Meal.find(id)
-        meal.name = name
-        meal.calories = calories
-        meal.date = date
-        meal.save
+    if id.present?
+      meal = Meal.find(id)
+      meal.name = name
+      meal.calories = calories
+      meal.date = date
+      if meal.save
+        render :json => meal
       else
-        meal = Meal.create(:name => name, :calories => calories, :date => date)
-        @auth.meals << meal
+        render :nothing => true
       end
-    render :json => meal
+    else
+      meal = Meal.new(:name => name, :calories => calories, :date => date)
+      if meal.save
+        @auth.meals << meal
+        render :json => meal
+      else
+        render :nothing => true
+      end
+    end
   end
 end
+
+
 

@@ -17,8 +17,8 @@ $(function(){
     }
   });
 
-  $( "#meal_date" ).datetimepicker({"dateFormat": "dd-mm-yy"});
-  $( "#workout_date" ).datetimepicker({"dateFormat": "dd-mm-yy"});
+  $("#meal_date").datetimepicker({"dateFormat": "dd-mm-yy"});
+  $("#workout_date").datetimepicker({"dateFormat": "dd-mm-yy"});
 
   $('#new_meal > input').val('');
   $('#new_workout > input').val('');

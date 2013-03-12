@@ -52,9 +52,13 @@ function create_meal()
 function add_meal(new_meal)
 {
   new_meal.date = new_meal.date.replace("Z", "");
-
+  new_meal.date = new_meal.date.replace("T", " ");
   all_meals.push(new_meal);
   update_selected_meals();
+  update_daily_calorie_total();
+  display_chart();
+  cancel_form();
+  $('#new_meal > input').val('');
 }
 
 function create_workout()
@@ -73,11 +77,20 @@ function create_workout()
     }).done(add_workout);
 }
 
+$( '#workout_form' ).each(function(){
+    this.reset();
+});
+
 function add_workout(new_workout)
 {
   new_workout.date = new_workout.date.replace("Z", "");
+  new_workout.date = new_workout.date.replace("T", " ");
   all_workouts.push(new_workout);
   update_selected_workouts();
+  update_daily_calorie_total();
+  display_chart();
+  cancel_form();
+  $('#new_workout > input').val('');
 }
 
 
